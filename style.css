@@ -19,7 +19,8 @@ main {
   background-color: hsl(217, 19%, 24%);
 }
 .heading {
-  color: hsl(150, 100%, 66%);
+  color: hsl(61, 98%, 52%);
+  /* color: hsl(150, 100%, 66%); */
   letter-spacing: 0.2rem;
   text-align: center;
   font-size: 1rem;
