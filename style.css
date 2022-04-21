@@ -9,25 +9,21 @@ body {
   background-color: hsl(217.9, 23.5%, 15.9%);
 }
 main {
-  padding: 8px 10px;
-  position: relative;
-  width: 70%;
-  max-width: 400px;
-  border-radius: 10px;
-  background-color: hsl(217, 19%, 24%);
   position: absolute;
   top: 50%;
   left: 50%;
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  transform: translate(-50%, -50%);
+  padding: 0.7rem 1.5rem;
+  width: min(80%, 30rem);
+  border-radius: 1rem;
+  background-color: hsl(217, 19%, 24%);
 }
 .heading {
   color: hsl(150, 100%, 66%);
-  letter-spacing: 3.5px;
+  letter-spacing: 0.2rem;
   text-align: center;
-  font-size: 0.8rem;
-  padding: 1.5rem 0 1rem 0;
+  font-size: 1rem;
+  padding: 1.5rem 0;
 }
 .advice-text {
   text-align: center;
@@ -37,11 +33,10 @@ main {
 }
 .animate {
   animation-duration: 1s;
-  animation-name: slidein;
-  overflow: hidden;
+  animation-name: fadeIn;
 }
 
-@keyframes slidein {
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -57,17 +52,18 @@ main {
   width: 100%;
 }
 .dice {
-  border-radius: 100%;
-  background-color: hsl(150, 100%, 66%);
-  cursor: pointer;
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
-  bottom: -1.5rem;
-  left: calc(50% - 1.5rem);
+  left: 50%;
+  display: grid;
+  place-items: center;
+  bottom: 0;
+  background-color: hsl(150, 100%, 66%);
+  width: 3.5rem;
+  height: 3.5rem;
+  transform: translate(-50%, 50%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
   transition: 0.3s;
 }
 @media screen and (min-width: 700px) {
