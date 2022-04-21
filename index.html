@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" color-mode="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,10 +10,24 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <title>Frontend Mentor | Advice generator app</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/6f90bc1711.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- End of Font awesome -->
+    <title>Frontend Mentor | Advice generator app</title>
   </head>
   <body>
+    <button class="toggle-btn light-mode" aria-label="Toggle light mode">
+      <span>Light Mode</span>
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <button class="toggle-btn dark-mode" aria-label="Toggle dark mode">
+      <span>Dark Mode</span>
+      <i class="fa-solid fa-sun"></i>
+    </button>
     <main>
       <h1 class="heading">ADVICE <span id="advice-id"> #001</span></h1>
       <p class="advice-text" id="advice-text">

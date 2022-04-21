@@ -1,4 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+/* Light Mode */
+:root[color-mode="light"] {
+  --body-bg: rgb(225, 225, 225);
+  --pry: hsl(195, 7%, 11%);
+  --surface3: #ffffff;
+  --element1: #111111;
+  --element2: #222222;
+  --element3: #333333;
+  --elementInverse: #eee;
+  --primary: #01408e;
+  --secondary: #3c5d5c;
+  --tertiary: #fff7d6;
+}
+
+/* Dark Mode */
+:root[color-mode="dark"] {
+  --body-bg: hsl(217.9, 23.5%, 15.9%);
+  --pry: hsl(193, 38%, 86%);
+  --surface2: #333333;
+  --surface3: #404040;
+  --element1: #eeeeee;
+  --element2: #dddddd;
+  --element3: #cccccc;
+  --elementInverse: #111;
+  --primary: #8fceff;
+  --secondary: #72faca;
+  --tertiary: #eee8a9;
+}
+:root[color-mode="light"] .light-mode {
+  display: none;
+}
+:root[color-mode="dark"] .dark-mode {
+  display: none;
+}
 * {
   padding: 0;
   margin: 0;
@@ -6,7 +40,7 @@
 }
 body {
   font-family: Manrope, sans-serif;
-  background-color: hsl(217.9, 23.5%, 15.9%);
+  background-color: var(--body-bg);
 }
 main {
   position: absolute;
@@ -18,6 +52,20 @@ main {
   border-radius: 1rem;
   background-color: hsl(217, 19%, 24%);
 }
+.toggle-btn {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  background-color: inherit;
+  color: var(--pry);
+}
+.toggle-btn span {
+  margin-right: 0.5rem;
+}
+
 .heading {
   color: hsl(150, 100%, 66%);
   letter-spacing: 0.2rem;
@@ -29,7 +77,7 @@ main {
   text-align: center;
   font-size: 1.75rem;
   font-weight: 800;
-  color: hsl(193, 38%, 86%);
+  color: var(--pry);
 }
 .animate {
   animation-duration: 1s;

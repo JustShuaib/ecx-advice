@@ -1,6 +1,7 @@
 const dice = document.getElementById("dice"),
   adviceId = document.getElementById("advice-id"),
-  adviceText = document.getElementById("advice-text");
+  adviceText = document.getElementById("advice-text"),
+  toggleBtn = document.querySelectorAll(".toggle-btn");
 /*  
 
 View the optimal layout for the app depending on their device's screen size.
@@ -17,8 +18,11 @@ Download the project using the link above and go through the README.md file. Thi
 
 May the odds be ever in your favor and may the force be with you, remember that Google is your best friend. */
 dice.addEventListener("click", displayAdvice);
+toggleBtn.forEach((btn) => {
+  btn.addEventListener("click", toggleMode);
+});
 setInterval(displayAdvice, 10000);
-
+function toggleMode() {}
 function displayAdvice() {
   async function getAdvice() {
     try {
@@ -38,4 +42,12 @@ function displayAdvice() {
   }
   getAdvice();
   adviceText.classList.remove("animate");
+}
+
+function toggleMode(e) {
+  if (e.currentTarget.classList.contains("dark-mode")) {
+    document.documentElement.setAttribute("color-mode", "dark");
+    return;
+  }
+  document.documentElement.setAttribute("color-mode", "light");
 }
