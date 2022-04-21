@@ -4,7 +4,9 @@
   --body-bg: hsl(220, 2%, 65%);
   --card-bg: rgb(197, 197, 197);
   --pry: hsl(195, 7%, 11%);
-  --heading-text: #274e13;
+  --pry-cyan: hsl(100, 61%, 19%);
+  --pry-die: hsl(100, 35%, 31%);
+  --light-cyan: hsl(150, 34%, 45%);
 }
 
 /* Dark Mode */
@@ -12,7 +14,9 @@
   --body-bg: hsl(217.9, 23.5%, 15.9%);
   --card-bg: hsl(217, 19%, 24%);
   --pry: hsl(193, 38%, 86%);
-  --heading-text: hsl(150, 100%, 66%);
+  --pry-cyan: hsl(150, 100%, 66%);
+  --pry-die: hsl(150, 100%, 66%);
+  --light-cyan: hsl(150, 72%, 39%);
 }
 :root[color-mode="light"] .light-mode {
   display: none;
@@ -60,7 +64,7 @@ main {
   text-align: center;
   font-size: 1rem;
   padding: 1.5rem 0;
-  color: var(--heading-text);
+  color: var(--pry-cyan);
   transition: 0.5s linear;
 }
 .advice-text {
@@ -96,7 +100,7 @@ main {
   display: grid;
   place-items: center;
   bottom: 0;
-  background-color: hsl(150, 100%, 66%);
+  background-color: var(--pry-die);
   width: 3.5rem;
   height: 3.5rem;
   transform: translate(-50%, 50%);
@@ -106,6 +110,5 @@ main {
   transition: 0.3s ease-in-out;
 }
 .dice:hover {
-  box-shadow: 1px 1px 20px hsl(150, 100%, 66%),
-    -1px -1px 20px hsl(150, 100%, 66%);
+  box-shadow: 1px 1px 20px var(--pry-die), -1px -1px 20px var(--light-cyan);
 }
