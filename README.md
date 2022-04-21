@@ -1,1 +1,1 @@
-https://justshuaib.github.io/ecx-advice/
+https://ecx-advice-asw85fu5d-justshuaib.vercel.app/
