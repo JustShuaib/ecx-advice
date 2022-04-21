@@ -103,11 +103,9 @@ main {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
-@media screen and (min-width: 700px) {
-  .dice:hover {
-    box-shadow: 1px 1px 20px hsl(150, 100%, 66%),
-      -1px -1px 20px hsl(150, 100%, 66%);
-  }
+.dice:hover {
+  box-shadow: 1px 1px 20px hsl(150, 100%, 66%),
+    -1px -1px 20px hsl(150, 100%, 66%);
 }
