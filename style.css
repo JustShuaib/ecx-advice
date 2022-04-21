@@ -1,31 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
 /* Light Mode */
 :root[color-mode="light"] {
-  --body-bg: rgb(225, 225, 225);
+  --body-bg: hsl(220, 2%, 65%);
+  --card-bg: rgb(197, 197, 197);
   --pry: hsl(195, 7%, 11%);
-  --surface3: #ffffff;
-  --element1: #111111;
-  --element2: #222222;
-  --element3: #333333;
-  --elementInverse: #eee;
-  --primary: #01408e;
-  --secondary: #3c5d5c;
-  --tertiary: #fff7d6;
+  --heading-text: #274e13;
 }
 
 /* Dark Mode */
 :root[color-mode="dark"] {
   --body-bg: hsl(217.9, 23.5%, 15.9%);
+  --card-bg: hsl(217, 19%, 24%);
   --pry: hsl(193, 38%, 86%);
-  --surface2: #333333;
-  --surface3: #404040;
-  --element1: #eeeeee;
-  --element2: #dddddd;
-  --element3: #cccccc;
-  --elementInverse: #111;
-  --primary: #8fceff;
-  --secondary: #72faca;
-  --tertiary: #eee8a9;
+  --heading-text: hsl(150, 100%, 66%);
 }
 :root[color-mode="light"] .light-mode {
   display: none;
@@ -41,6 +28,7 @@
 body {
   font-family: Manrope, sans-serif;
   background-color: var(--body-bg);
+  transition: 1s ease-in-out;
 }
 main {
   position: absolute;
@@ -50,7 +38,8 @@ main {
   padding: 0.7rem 1.5rem;
   width: min(80%, 30rem);
   border-radius: 1rem;
-  background-color: hsl(217, 19%, 24%);
+  background-color: var(--card-bg);
+  transition: 0.7s ease-in-out;
 }
 .toggle-btn {
   position: absolute;
@@ -67,16 +56,18 @@ main {
 }
 
 .heading {
-  color: hsl(150, 100%, 66%);
   letter-spacing: 0.2rem;
   text-align: center;
   font-size: 1rem;
   padding: 1.5rem 0;
+  color: var(--heading-text);
+  transition: 0.5s linear;
 }
 .advice-text {
   text-align: center;
   font-size: 1.75rem;
   font-weight: 800;
+  transition: 0.8s linear;
   color: var(--pry);
 }
 .animate {
