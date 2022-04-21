@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Manrope, sans-serif;
+  background-color: hsl(217.9, 23.5%, 15.9%);
+}
+main {
+  padding: 8px 10px;
+  position: relative;
+  width: 70%;
+  max-width: 400px;
+  border-radius: 10px;
+  background-color: hsl(217, 19%, 24%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.heading {
+  color: hsl(150, 100%, 66%);
+  letter-spacing: 3.5px;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 1.5rem 0 1rem 0;
+}
+.advice-text {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: hsl(193, 38%, 86%);
+}
+.animate {
+  animation-duration: 1s;
+  animation-name: slidein;
+  overflow: hidden;
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.divider {
+  margin: 2rem 0;
+  width: 100%;
+}
+.dice {
+  border-radius: 100%;
+  background-color: hsl(150, 100%, 66%);
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -1.5rem;
+  left: calc(50% - 1.5rem);
+  transition: 0.3s;
+}
+@media screen and (min-width: 700px) {
+  .dice:hover {
+    box-shadow: 1px 1px 20px hsl(150, 100%, 66%),
+      -1px -1px 20px hsl(150, 100%, 66%);
+  }
+}
