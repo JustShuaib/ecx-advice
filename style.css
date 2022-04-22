@@ -53,7 +53,7 @@ main {
   border: none;
   cursor: pointer;
   font: inherit;
-  background-color: inherit;
+  background-color: unset;
   color: var(--pry);
 }
 .toggle-btn span {
