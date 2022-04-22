@@ -33,10 +33,10 @@ body {
   font-family: Manrope, sans-serif;
   background-color: var(--body-bg);
   transition: 1s ease-in-out;
+  overflow-y: auto;
 }
 main {
-  overflow-y: auto;
-  max-height: cal(100vh - 2rem);
+  /* max-height: cal(100vh - 2rem); */
   position: absolute;
   top: 50%;
   left: 50%;
