@@ -33,7 +33,11 @@ body {
   font-family: Manrope, sans-serif;
   background-color: var(--body-bg);
   transition: 1s ease-in-out;
-  overflow-y: auto;
+}
+@media screen and (max-width: 370px) {
+  body {
+    zoom: 0.8;
+  }
 }
 main {
   position: absolute;

@@ -32,5 +32,5 @@ dice.addEventListener("click", displayAdvice);
 toggleBtn.forEach((btn) => {
   btn.addEventListener("click", toggleMode);
 });
-// Display new advice every 10 secs
+
 setInterval(displayAdvice, 10000);
