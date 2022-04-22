@@ -6,24 +6,20 @@ const dice = document.getElementById("dice"),
 function displayAdvice() {
   async function getAdvice() {
     try {
-      const adviceObject = await fetch("https://api.adviceslip.com/advice");
-      if (adviceObject.ok) {
-        const realAdvice = await adviceObject.json();
-        const { advice, id } = realAdvice.slip;
-        adviceText.classList.add("animate");
-        adviceText.innerText = `"${advice}"`;
-        adviceId.innerText = `#${id}`;
-      } else {
-        throw new Error("Failed to fetch advice 😔");
-      }
+      const adviceObject = await fetch("https://api.adviceslip.com/advice/37");
+      if (!adviceObject.ok) throw new Error("Failed to fetch advice 😔");
+      const realAdvice = await adviceObject.json();
+      const { advice, id } = realAdvice.slip;
+      adviceText.classList.add("animate");
+      adviceText.innerText = `"${advice}"`;
+      adviceId.innerText = `#${id}`;
     } catch (error) {
-      adviceText.innerText = error.name + ": Failed to fetch advice 😔";
+      adviceText.innerText = error.name + " : " + error.message;
     }
   }
   getAdvice();
   adviceText.classList.remove("animate");
 }
-
 function toggleMode(e) {
   if (e.currentTarget.classList.contains("dark-mode")) {
     document.documentElement.setAttribute("color-mode", "dark");
@@ -36,5 +32,5 @@ dice.addEventListener("click", displayAdvice);
 toggleBtn.forEach((btn) => {
   btn.addEventListener("click", toggleMode);
 });
-
+// Display new advice every 10 secs
 setInterval(displayAdvice, 10000);

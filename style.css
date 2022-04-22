@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
-/* Light Mode */
+/* Light Mode Styles */
 :root[color-mode="light"] {
-  --body-bg: hsl(220, 2%, 65%);
-  --card-bg: rgb(197, 197, 197);
-  --pry: hsl(195, 7%, 11%);
+  --body-bg: hsla(0, 0%, 69%, 0.548);
+  --container-bg: rgb(223, 223, 223);
+  --pry: hsl(0, 0%, 0%);
   --pry-cyan: hsl(100, 61%, 19%);
-  --pry-die: hsl(100, 35%, 31%);
+  --pry-die: hsl(100, 27%, 47%);
   --light-cyan: hsl(150, 34%, 45%);
 }
 
-/* Dark Mode */
+/* Dark Mode Styles */
 :root[color-mode="dark"] {
   --body-bg: hsl(217.9, 23.5%, 15.9%);
-  --card-bg: hsl(217, 19%, 24%);
+  --container-bg: hsl(217, 19%, 24%);
   --pry: hsl(193, 38%, 86%);
   --pry-cyan: hsl(150, 100%, 66%);
   --pry-die: hsl(150, 100%, 66%);
@@ -35,6 +35,8 @@ body {
   transition: 1s ease-in-out;
 }
 main {
+  overflow-y: auto;
+  max-height: cal(100vh - 2rem);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -42,7 +44,7 @@ main {
   padding: 0.7rem 1.5rem;
   width: min(80%, 30rem);
   border-radius: 1rem;
-  background-color: var(--card-bg);
+  background-color: var(--container-bg);
   transition: 0.7s ease-in-out;
 }
 .toggle-btn {
@@ -109,6 +111,8 @@ main {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.dice:hover {
-  box-shadow: 1px 1px 20px var(--pry-die), -1px -1px 20px var(--light-cyan);
+@media screen and (min-width: 40rem) {
+  .dice:hover {
+    box-shadow: 1px 1px 20px var(--pry-die), -1px -1px 20px var(--light-cyan);
+  }
 }
