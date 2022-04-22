@@ -36,7 +36,6 @@ body {
   overflow-y: auto;
 }
 main {
-  /* max-height: cal(100vh - 2rem); */
   position: absolute;
   top: 50%;
   left: 50%;

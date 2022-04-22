@@ -6,7 +6,7 @@ const dice = document.getElementById("dice"),
 function displayAdvice() {
   async function getAdvice() {
     try {
-      const adviceObject = await fetch("https://api.adviceslip.com/advice/37");
+      const adviceObject = await fetch("https://api.adviceslip.com/advice");
       if (!adviceObject.ok) throw new Error("Failed to fetch advice 😔");
       const realAdvice = await adviceObject.json();
       const { advice, id } = realAdvice.slip;
