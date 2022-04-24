@@ -22,10 +22,10 @@ function displayAdvice() {
 }
 function toggleMode(e) {
   if (e.currentTarget.classList.contains("dark-mode")) {
-    document.body.setAttribute("color-mode", "dark");
+    document.documentElement.setAttribute("color-mode", "dark");
     return;
   }
-  document.body.setAttribute("color-mode", "light");
+  document.documentElement.setAttribute("color-mode", "light");
 }
 
 dice.addEventListener("click", displayAdvice);
